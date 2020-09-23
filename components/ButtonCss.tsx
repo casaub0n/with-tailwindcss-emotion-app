@@ -35,7 +35,13 @@ const styles = {
   `),
 }
 
-const ButtonCss = ({ className, children, ...props }) => (
+type ButtonCssProps = {
+  className?: string,
+  children: React.ReactNode,
+  props?: JSX.IntrinsicElements["button"]
+}
+
+const ButtonCss = ({ className, children, ...props }: ButtonCssProps): JSX.Element => (
   <button {...props} className={cx(styles.button, 'group', className)}>
     {/* inline style */}
     <span className={css(tw`absolute left-0 inset-y-0 flex items-center pl-3`)}>

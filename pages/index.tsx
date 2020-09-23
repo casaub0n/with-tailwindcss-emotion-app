@@ -4,7 +4,7 @@ import ButtonCss from '../components/ButtonCss'
 import ButtonReact from '../components/ButtonReact'
 import ButtonStyled from '../components/ButtonStyled'
 
-const Index = () => (
+const Index = (): JSX.Element => (
   <div className={css(tw`grid justify-center items-center h-screen`)}>
     <ButtonCss>@emotion/css</ButtonCss>
     <ButtonReact>@emotion/react</ButtonReact>

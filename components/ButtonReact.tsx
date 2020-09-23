@@ -34,7 +34,13 @@ const styles = {
   `,
 }
 
-const ButtonReact = ({ className, children, ...props }) => (
+type ButtonReactProps = {
+  className?: string,
+  children: React.ReactNode,
+  props?: JSX.IntrinsicElements["button"]
+}
+
+const ButtonReact = ({ className, children, ...props }: ButtonReactProps): JSX.Element => (
   <button
     {...props}
     css={styles.button}
